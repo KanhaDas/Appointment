@@ -11,7 +11,7 @@ const AdminContextProvider=(props)=>{
   const [appointments,setAppointments]=useState([])
   const[dashData,setDashData]=useState(false)
 
-  const backendUrl=import.meta.env.VITE_BACKEND_URL
+  const backendUrl="https://appointment-re91.onrender.com"
   const getAllDoctors=async()=>{
     try{
       const{data}=await axios.get(backendUrl+'/api/admin/all-doctors',{headers:{aToken}})
